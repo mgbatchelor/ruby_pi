@@ -4,7 +4,7 @@ class Scanner
     raise NotImplementedError
   end
 
-  class RandomScanner < Scanner
+  class Random < Scanner
     def scan
       {
         value: rand(100)
@@ -12,7 +12,7 @@ class Scanner
     end
   end
 
-  class GpioScanner < Scanner
+  class Gpio < Scanner
 
     def initialize(mapping)
       @mapping = mapping

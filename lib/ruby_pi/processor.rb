@@ -4,7 +4,7 @@ class Processor
     raise NotImplementedError
   end
 
-  class StdOutProcessor < Processor
+  class StdOut < Processor
 
     def process(state)
       puts "#{Time.now} - #{state.states}"
@@ -12,7 +12,7 @@ class Processor
 
   end
 
-  class GpioProcessor < Processor
+  class Gpio < Processor
     def initialize(mapping)
       @mapping = mapping
       initialize_mapping
