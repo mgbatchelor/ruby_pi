@@ -23,7 +23,6 @@ class Runner
     if @window == now.to_i
       @ips += 1
     else
-      puts "IPS: #{@ips}"
       @window = now.to_i
       @ips = 0
     end

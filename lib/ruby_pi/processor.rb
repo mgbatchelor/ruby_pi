@@ -33,7 +33,7 @@ class Processor
 
     def write(pin, value)
       return unless pin
-      if value == 1
+      if rand <= value
         RPi::GPIO.set_high(pin)
       else
         RPi::GPIO.set_low(pin)

@@ -7,16 +7,17 @@ class Brain
   def ingest(scan)
     return if @stack.size > 4
     # Decide what to do based on current stack, and new data
-    case scan[:value]
-    when 0
-      @stack << Direction.left(rand(5))
-    when 1
-      @stack << Direction.right(rand(5))
-    when 2
-      @stack << Direction.straight(rand(5))
-    when 3
-      @stack << Direction.stop(1)
-    end
+    @stack = [State.new(1, scan)]
+    # case scan[:value]
+    # when 0
+    #   @stack << Direction.left(rand(5))
+    # when 1
+    #   @stack << Direction.right(rand(5))
+    # when 2
+    #   @stack << Direction.straight(rand(5))
+    # when 3
+    #   @stack << Direction.stop(1)
+    # end
   end
 
   def state(now)
