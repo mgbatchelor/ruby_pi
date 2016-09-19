@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ruby_pi/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ruby_pi"
-  spec.version       = RubyPi::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["Michael Batchelor"]
   spec.email         = ["batchelor@nationbuilder.com"]
 
