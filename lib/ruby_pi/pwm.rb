@@ -1,4 +1,4 @@
-def Pwm
+class Pwm
   attr_reader :pwm
 
   def initialize(pin)
