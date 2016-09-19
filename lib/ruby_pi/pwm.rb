@@ -13,4 +13,8 @@ class Pwm
 end
 
 class Wheel < Pwm; end
-class Buzzer < Pwm; end
+class Buzzer < Pwm
+  def set(value)
+    @pwm.duty_cycle = value * 50
+  end
+end
